@@ -75,6 +75,52 @@ namespace Converter
             }
         }
 
+        private void Bar_Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                bar_To_kNm2.Text = Convert.ToString(Convert.ToDouble(barAmount.Text) * 100);
+            }
+            catch (FormatException)
+            {
+                bar_To_kNm2.Text = "0";
+            }
+        }
 
+        private void Pascal_Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                pascal_To_kNm2.Text = Convert.ToString(Convert.ToDouble(pascalAmount.Text) * 0.001);
+            }
+            catch (FormatException)
+            {
+                pascal_To_kNm2.Text = "0";
+            }
+        }
+
+        private void Ton_Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                tonm2_To_kNm2.Text = Convert.ToString(Convert.ToDouble(tonm2Amount.Text) * 9.80665);
+            }
+            catch (FormatException)
+            {
+                tonm2_To_kNm2.Text = "0";
+            }
+        }
+
+        private void Atmosphere_Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                atmosphere_To_kNm2.Text = Convert.ToString(Convert.ToDouble(atmosphereAmount.Text) * 101.325);
+            }
+            catch (FormatException)
+            {
+                atmosphere_To_kNm2.Text = "0";
+            }
+        }
     }
 }
